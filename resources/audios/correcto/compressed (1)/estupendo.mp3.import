@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/estupendo.mp3-b23fe24a6d52d626de5f82da61bf13fe.mp3str"
+
+[deps]
+
+source_file="res://resources/audios/correcto/compressed (1)/estupendo.mp3"
+dest_files=[ "res://.import/estupendo.mp3-b23fe24a6d52d626de5f82da61bf13fe.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

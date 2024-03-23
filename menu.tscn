@@ -1,0 +1,244 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://menu.gd" type="Script" id=1]
+[ext_resource path="res://resources/sprites/anima.png" type="Texture" id=2]
+[ext_resource path="res://resources/sprites/fondo.png" type="Texture" id=3]
+[ext_resource path="res://Pizarra.gd" type="Script" id=4]
+[ext_resource path="res://resources/sprites/marco.png" type="Texture" id=5]
+[ext_resource path="res://resources/sprites/canasto.png" type="Texture" id=6]
+[ext_resource path="res://resources/audios/bgmusic (mp3cut.net).ogg" type="AudioStream" id=7]
+[ext_resource path="res://resources/audios/correcto/compressed/estupendo.wav" type="AudioStream" id=8]
+[ext_resource path="res://nums.tscn" type="PackedScene" id=9]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 146.114, 135.348 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 900, 0, 300, 300 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 300, 300 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 1200, 0, 300, 300 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 1500, 0, 300, 300 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 1800, 0, 300, 300 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 2100, 0, 300, 300 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 2400, 0, 300, 300 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 2700, 0, 300, 300 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 3000, 0, 300, 300 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 3300, 0, 300, 300 )
+
+[sub_resource type="SpriteFrames" id=12]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
+"loop": true,
+"name": "star",
+"speed": 5.0
+} ]
+
+[node name="Node2D" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pizarra" type="Sprite" parent="."]
+position = Vector2( 241, 24 )
+scale = Vector2( 0.583333, 0.371354 )
+centered = false
+offset = Vector2( -382.286, -177.728 )
+script = ExtResource( 4 )
+
+[node name="Canasto" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0.72549 )
+position = Vector2( 248, 301 )
+scale = Vector2( 0.575025, 0.575025 )
+z_index = 2
+texture = ExtResource( 6 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Canasto"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Canasto/StaticBody2D"]
+position = Vector2( -274.771, -133.907 )
+polygon = PoolVector2Array( -38.2592, -46.9545, -39.9982, 172.166, 3.47813, 227.816, 106.082, 293.9, 271.292, 316.508, 433.024, 293.9, 570.41, 215.643, 586.061, -29.5639, 558.236, -27.8249, 544.324, 196.513, 419.112, 269.553, 269.553, 288.683, 119.995, 271.292, 26.0858, 210.426, -17.3905, 139.124, -8.69525, -38.2592 )
+
+[node name="Marco" type="Sprite" parent="."]
+position = Vector2( 241, 73 )
+scale = Vector2( 0.325088, 0.325088 )
+texture = ExtResource( 5 )
+
+[node name="marco" type="Area2D" parent="Marco"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Marco/marco"]
+position = Vector2( -1.5379, 0 )
+shape = SubResource( 1 )
+
+[node name="Estrellas" type="AnimatedSprite" parent="Marco"]
+visible = false
+position = Vector2( -3.07611, 0 )
+scale = Vector2( 1.47652, 1.47652 )
+frames = SubResource( 12 )
+animation = "star"
+speed_scale = 3.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+autoplay = true
+
+[node name="correcto" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+mix_target = 2
+
+[node name="GridContainer" type="GridContainer" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 19.0
+margin_top = -180.0
+margin_right = -27.0
+margin_bottom = -38.0
+custom_constants/vseparation = 6
+custom_constants/hseparation = 6
+columns = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="num" parent="GridContainer" instance=ExtResource( 9 )]
+margin_right = 82.0
+margin_bottom = 68.0
+
+[node name="num2" parent="GridContainer" instance=ExtResource( 9 )]
+margin_left = 88.0
+margin_right = 170.0
+margin_bottom = 68.0
+
+[node name="AnimatedSprite" parent="GridContainer/num2/num" index="0"]
+frame = 1
+
+[node name="num3" parent="GridContainer" instance=ExtResource( 9 )]
+margin_left = 176.0
+margin_right = 258.0
+margin_bottom = 68.0
+
+[node name="AnimatedSprite" parent="GridContainer/num3/num" index="0"]
+frame = 2
+
+[node name="num4" parent="GridContainer" instance=ExtResource( 9 )]
+margin_left = 264.0
+margin_right = 346.0
+margin_bottom = 68.0
+
+[node name="AnimatedSprite" parent="GridContainer/num4/num" index="0"]
+frame = 3
+
+[node name="num5" parent="GridContainer" instance=ExtResource( 9 )]
+margin_left = 352.0
+margin_right = 434.0
+margin_bottom = 68.0
+
+[node name="AnimatedSprite" parent="GridContainer/num5/num" index="0"]
+frame = 4
+
+[node name="num6" parent="GridContainer" instance=ExtResource( 9 )]
+margin_top = 74.0
+margin_right = 82.0
+margin_bottom = 142.0
+
+[node name="AnimatedSprite" parent="GridContainer/num6/num" index="0"]
+frame = 5
+
+[node name="num7" parent="GridContainer" instance=ExtResource( 9 )]
+margin_left = 88.0
+margin_top = 74.0
+margin_right = 170.0
+margin_bottom = 142.0
+
+[node name="AnimatedSprite" parent="GridContainer/num7/num" index="0"]
+frame = 6
+
+[node name="num8" parent="GridContainer" instance=ExtResource( 9 )]
+margin_left = 176.0
+margin_top = 74.0
+margin_right = 258.0
+margin_bottom = 142.0
+
+[node name="AnimatedSprite" parent="GridContainer/num8/num" index="0"]
+frame = 7
+
+[node name="num9" parent="GridContainer" instance=ExtResource( 9 )]
+margin_left = 264.0
+margin_top = 74.0
+margin_right = 346.0
+margin_bottom = 142.0
+
+[node name="AnimatedSprite" parent="GridContainer/num9/num" index="0"]
+frame = 8
+
+[node name="num10" parent="GridContainer" instance=ExtResource( 9 )]
+margin_left = 352.0
+margin_top = 74.0
+margin_right = 434.0
+margin_bottom = 142.0
+
+[node name="AnimatedSprite" parent="GridContainer/num10/num" index="0"]
+frame = 9
+
+[connection signal="animation_finished" from="Marco/Estrellas" to="Pizarra" method="_on_Estrellas_animation_finished"]
+
+[editable path="GridContainer/num2"]
+[editable path="GridContainer/num3"]
+[editable path="GridContainer/num4"]
+[editable path="GridContainer/num5"]
+[editable path="GridContainer/num6"]
+[editable path="GridContainer/num7"]
+[editable path="GridContainer/num8"]
+[editable path="GridContainer/num9"]
+[editable path="GridContainer/num10"]

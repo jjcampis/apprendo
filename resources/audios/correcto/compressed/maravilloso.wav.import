@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/maravilloso.wav-8b04e353138b1d0472188407f1b3930f.sample"
+
+[deps]
+
+source_file="res://resources/audios/correcto/compressed/maravilloso.wav"
+dest_files=[ "res://.import/maravilloso.wav-8b04e353138b1d0472188407f1b3930f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

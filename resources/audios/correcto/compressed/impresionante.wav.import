@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/impresionante.wav-744ac481cc671c0206525119c6b9858c.sample"
+
+[deps]
+
+source_file="res://resources/audios/correcto/compressed/impresionante.wav"
+dest_files=[ "res://.import/impresionante.wav-744ac481cc671c0206525119c6b9858c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

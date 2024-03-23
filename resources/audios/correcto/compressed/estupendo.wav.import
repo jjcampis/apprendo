@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/estupendo.wav-c94b54dd451c5c6e5d09e4a2ae8b353a.sample"
+
+[deps]
+
+source_file="res://resources/audios/correcto/compressed/estupendo.wav"
+dest_files=[ "res://.import/estupendo.wav-c94b54dd451c5c6e5d09e4a2ae8b353a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

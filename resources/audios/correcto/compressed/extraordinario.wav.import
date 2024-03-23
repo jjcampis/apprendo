@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/extraordinario.wav-9659bdfb4fcb7097fe043a75987d47b1.sample"
+
+[deps]
+
+source_file="res://resources/audios/correcto/compressed/extraordinario.wav"
+dest_files=[ "res://.import/extraordinario.wav-9659bdfb4fcb7097fe043a75987d47b1.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/extraordinario.mp3-9c498eb57a4beb19f93b7f1b1c7799d3.mp3str"
+
+[deps]
+
+source_file="res://resources/audios/correcto/compressed (1)/extraordinario.mp3"
+dest_files=[ "res://.import/extraordinario.mp3-9c498eb57a4beb19f93b7f1b1c7799d3.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

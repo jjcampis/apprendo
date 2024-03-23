@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bienHecho.mp3-f7f8a094413bc125294c682664d6007b.mp3str"
+
+[deps]
+
+source_file="res://resources/audios/correcto/compressed (1)/bienHecho.mp3"
+dest_files=[ "res://.import/bienHecho.mp3-f7f8a094413bc125294c682664d6007b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

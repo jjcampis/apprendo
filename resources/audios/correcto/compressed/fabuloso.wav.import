@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/fabuloso.wav-82453a51552b8816b3ca5bb0a2028bf1.sample"
+
+[deps]
+
+source_file="res://resources/audios/correcto/compressed/fabuloso.wav"
+dest_files=[ "res://.import/fabuloso.wav-82453a51552b8816b3ca5bb0a2028bf1.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

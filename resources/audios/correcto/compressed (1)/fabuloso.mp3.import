@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/fabuloso.mp3-4402fa07727d0f7aefdbc018e05db0a5.mp3str"
+
+[deps]
+
+source_file="res://resources/audios/correcto/compressed (1)/fabuloso.mp3"
+dest_files=[ "res://.import/fabuloso.mp3-4402fa07727d0f7aefdbc018e05db0a5.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
